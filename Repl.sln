@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repl.Server.Core", "Repl.Server.Core\Repl.Server.Core.csproj", "{2899A455-26E7-4DA1-A037-F0D1A556022C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repl.Server.Game", "Repl.Server.Game\Repl.Server.Game.csproj", "{C3DD02DF-BB1F-44FC-8B90-93D2D0356379}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repl.Server.Coordinator", "Repl.Server.Coordinator\Repl.Server.Coordinator.csproj", "{5A6B02FE-D451-48FB-8801-DF663848593A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repl.Server.Database", "Repl.Server.Database\Repl.Server.Database.csproj", "{ACCB2DA1-8E99-40A0-A7F7-554E4D43761B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FD1FB51-71F4-481F-9738-A87239785A64}"
+	ProjectSection(SolutionItems) = preProject
+		ReplServerConfig\service_config.json = ReplServerConfig\service_config.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyClient", "DummyClient\DummyClient.csproj", "{3F19D3CC-4931-46D2-AEE9-1D43FB23AE4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2899A455-26E7-4DA1-A037-F0D1A556022C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2899A455-26E7-4DA1-A037-F0D1A556022C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2899A455-26E7-4DA1-A037-F0D1A556022C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2899A455-26E7-4DA1-A037-F0D1A556022C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DD02DF-BB1F-44FC-8B90-93D2D0356379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DD02DF-BB1F-44FC-8B90-93D2D0356379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DD02DF-BB1F-44FC-8B90-93D2D0356379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DD02DF-BB1F-44FC-8B90-93D2D0356379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6B02FE-D451-48FB-8801-DF663848593A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6B02FE-D451-48FB-8801-DF663848593A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6B02FE-D451-48FB-8801-DF663848593A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6B02FE-D451-48FB-8801-DF663848593A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACCB2DA1-8E99-40A0-A7F7-554E4D43761B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCB2DA1-8E99-40A0-A7F7-554E4D43761B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCB2DA1-8E99-40A0-A7F7-554E4D43761B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCB2DA1-8E99-40A0-A7F7-554E4D43761B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F19D3CC-4931-46D2-AEE9-1D43FB23AE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F19D3CC-4931-46D2-AEE9-1D43FB23AE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F19D3CC-4931-46D2-AEE9-1D43FB23AE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F19D3CC-4931-46D2-AEE9-1D43FB23AE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14CFD142-5E60-4EBD-9289-19410584FCA6}
+	EndGlobalSection
+EndGlobal

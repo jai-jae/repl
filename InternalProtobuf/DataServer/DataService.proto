@@ -1,0 +1,10 @@
+﻿syntax = "proto3";
+
+import "DataServer/DataProtocol.proto";
+
+package repl.protobuf.DataServer;
+
+option csharp_namespace = "ReplInternalProtocol.DataServer";
+
+service DataService {
+}

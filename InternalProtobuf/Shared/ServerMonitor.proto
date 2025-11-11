@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ReplInternalProtocol.Common";
+
+enum ServerStatus
+{
+    Active = 0;
+    Pending = 1;
+    Inactive = 2;
+}
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse
+{
+    ServerStatus status = 1;
+    int32 roomCount = 2;
+    int32 connectedUserCount = 3;
+}

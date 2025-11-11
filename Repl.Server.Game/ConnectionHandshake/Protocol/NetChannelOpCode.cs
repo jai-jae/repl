@@ -1,0 +1,24 @@
+namespace Repl.Server.Game.ConnectionHandshake.Protocol;
+
+public enum NetChannelOpCode : ushort
+{
+    // MULTIPLEXED PROTOCOL
+    INIT_TCP_MULTIPLEXED_REQUEST = 1, // c -> s
+    INIT_TCP_MULTIPLEXED_RESPONSE = 2, // s -> c
+    INIT_TCP_MULTIPLEXED_REJECTED = 3, // s -> c
+        
+    JOIN_TCP_MULTIPLEXED_REQUEST = 4, // c -> s
+    JOIN_TCP_MULTIPLEXED_RESPONSE = 5, // s -> c
+        
+    TCP_MULTIPLEXED_CHANNEL_READY = 6, // s -> c
+    TCP_MULTIPLEXED_CHANNEL_READY_ACKNOWLEDGED = 7, // c -> s
+    
+    TCP_MULTIPLEXED_CHANNEL_ACTIVATED = 8,
+    
+    RECONNECT_TCP_MULTIPLEXED_REQUEST = 9, // c -> s
+    RECONNECT_TCP_MULTIPLEXED_RESPONSE = 10, // s -> c
+        
+    // SIMPLE PROTOCOL
+    INIT_TCP_SIMPLE_REQUEST = 11,
+    INIT_TCP_SIMPLE_RESPONSE = 12,
+}

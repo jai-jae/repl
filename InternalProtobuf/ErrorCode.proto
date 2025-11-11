@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "InternalErrorProtocol";
+
+enum EErrorCode
+{
+    None = 0;
+    Ok = 1;
+    Other = 2;
+}
+
+enum EDbErrorCode
+{
+    Success = 0;
+    NoRecord = 1;
+    TransactionError = 2;
+    Fatal = 65535;
+}

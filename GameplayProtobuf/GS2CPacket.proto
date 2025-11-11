@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option csharp_namespace = "ReplGameProtocol";
+
+enum OwnershipPriority
+{
+  Default = 0;
+  Colliding = 1;
+  Interaction = 2;
+}
+
+enum InteractionType
+{
+    Collision = 0;
+    PickupAttempt = 1;
+    Drop = 2;
+}
+
+message TransformSyncInfo
+{
+    int32 entityId = 1; // set by server only. Room's static localObjectId (player, movable objects)
+    // int32 ownerId = 2; // set by server only. Room's static localObjectId (player that owns the movement)
+    Vector2F position = 3;
+    Vector2F velocity = 4;
+    float rotation = 5;
+    Vector2F force = 6; // optional for rigidbody only.
+}
+
+message Vector2I
+{
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Vector2F
+{
+    float x = 1;
+    float y = 2;
+}
+
+message EntitySnapshot
+{
+  int64 entityId = 1;
+  Vector2F position = 2;
+}
+
+message GameplayEvent
+{
+  
+}

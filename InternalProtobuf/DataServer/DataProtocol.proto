@@ -1,0 +1,5 @@
+﻿syntax = "proto3";
+
+package repl.protobuf.DataServer;
+
+option csharp_namespace = "ReplInternalProtocol.DataServer";

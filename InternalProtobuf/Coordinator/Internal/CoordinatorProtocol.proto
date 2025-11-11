@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package repl.protobuf.Coordinator;
+
+option csharp_namespace = "ReplInternalProtocol.Coordinator";
+
+enum ServerType {
+  None = 0;
+  Game = 1;
+  Database = 2;
+}
+
+message RegisterServerRequest
+{
+	string privateIp = 1;
+  string publicIp = 2;
+	int32 publicGamePort = 3;
+	int32 privateGrpcPort = 4;
+}
+
+message RegisterServerResponse
+{
+	int32 nodeId = 1;
+	int32 privateGrpcPort = 2;
+}
+
+message TravelOutRequest
+{
+	int64 playerId = 1;
+}
+
+message TravelOutResponse
+{
+	string ipAddress = 1;
+	int32 port = 2;
+	string authToken = 3;	// token needs to be passed to destination server for secured travel from server A to B.
+}
+
+message TravelInRequest
+{
+	int64 playerId = 1;
+	string authToken = 2;
+}
+
+message TravelInResponse
+{
+  int64 playerId = 1;
+}

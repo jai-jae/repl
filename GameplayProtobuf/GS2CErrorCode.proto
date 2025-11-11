@@ -1,0 +1,10 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ReplErrorProtocol";
+
+enum GS2CErrorCode
+{
+    None = 0;
+    Ok = 1;
+    Other = 2;
+}

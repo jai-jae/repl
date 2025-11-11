@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+import "Shared/Empty.proto";
+import "Coordinator/Internal/CoordinatorProtocol.proto";
+
+package repl.protobuf.Coordinator;
+
+option csharp_namespace = "ReplInternalProtocol.Coordinator";
+
+service CoordinatorService {
+	// Coordinator
+	rpc RegisterServer(RegisterServerRequest) returns (RegisterServerResponse);
+  
+	// Game - GAME Server Travel
+	rpc TravelIn(TravelInRequest) returns (TravelInResponse);
+	rpc TravelOut(TravelOutRequest) returns (TravelOutResponse);
+}

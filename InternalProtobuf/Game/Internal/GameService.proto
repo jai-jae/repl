@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+import "Shared/Empty.proto";
+import "Shared/ServerMonitor.proto";
+
+package repl.protobuf.GameServer;
+
+option csharp_namespace = "ReplInternalProtocol.GS";
+
+service GameServerGrpc
+{
+    // monitoring GameServer status
+    rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+}

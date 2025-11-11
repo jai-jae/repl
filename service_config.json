@@ -1,0 +1,14 @@
+{
+    "CoordinatorContext": {
+        "PrivateIp": "127.0.0.1",
+        "PrivateGrpcPort": 23001
+    },
+    "DataServiceContext": {
+        "PrivateIp": "127.0.0.1",
+        "PrivateGrpcPort": 23002
+    },
+    "GameServerContext": {
+        "PublicPort": 42422,
+        "PrivateGrpcPort": 23003
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "CoordinatorContext": {
+        "PrivateIp": "127.0.0.1",
+        "PrivateGrpcPort": 23001,
+        "GrpcClient": {
+            "DataService": {
+                "PrivateIp": "127.0.0.1",
+                "PrivateGrpcPort": 23002,
+                "TimeoutSecond": 3
+            }
+        }
+    },
+    "DataServiceContext": {
+        "PrivateIp": "127.0.0.1",
+        "PrivateGrpcPort": 23002,
+        "DatabaseConfig": {
+            "Server": "127.0.0.1",
+            "UserId": "",
+            "Password": "",
+            "Database": "",
+            "Port": 3306,
+            "ConnectionTimeout": 30,
+            "CommandTimeout": 30,
+            "Pooling": true,
+            "MinimumPoolSize": 5,
+            "MaximumPoolSize": 100
+        }
+    },
+    "GameServerContext": {
+        "PublicPort": 42422,
+        "PrivateGrpcPort": 23003,
+        "MaxUserCount": 1000,
+        "RoomManager": {
+            "MaxRoomCount": 200,
+            "RoomDisposeLoopInterval": 10,
+            "RoomDisposeEmptyTime": 600,
+            "RoomTickInterval": 16.6666
+        },
+        "GrpcClient": {
+            "DataService": {
+                "PrivateIp": "127.0.0.1",
+                "PrivateGrpcPort": 23002,
+                "TimeoutSecond": 10
+            },
+            "CoordinatorService": {
+                "PrivateIp": "127.0.0.1",
+                "PrivateGrpcPort": 23001,
+                "TimeoutSecond": 5
+            }
+        }
+    }
+}

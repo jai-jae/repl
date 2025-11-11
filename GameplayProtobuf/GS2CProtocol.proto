@@ -1,0 +1,73 @@
+﻿syntax = "proto3";
+
+import "GS2CErrorCode.proto";
+import "GS2CPacket.proto";
+
+option csharp_namespace = "ReplGameProtocol";
+
+message GS2CProtocol
+{
+    enum OpCode
+    {
+        None = 0;
+        EnterServerRes = 1;
+        LeaveServerRes = 2;
+        
+        EnterRoomRes = 3;
+        LeaveRoomRes = 4;
+        
+        EnterRoomNoti = 5;
+        LeaveRoomNoti = 6;
+        
+        EntitySnapshotUpdate = 101;
+        GameplayEventUpdate = 102;
+        
+        DummyTest = 9999;
+    }
+
+    message Packet
+    {
+        message EnterServerRes
+        {
+            int32 errorCode = 1;
+        }
+
+        message LeaveServerRes
+        {
+            GS2CErrorCode errorCode = 1;
+            string lobbyAddress = 2;
+        }
+
+        message EnterRoomRes
+        {
+            GS2CErrorCode errorCode = 1;
+        }
+
+        message LeaveRoomRes
+        {
+            GS2CErrorCode errorCode = 1;
+        }
+
+        message EnterRoomNoti
+        {
+
+        }
+
+        message LeaveRoomNoti
+        {
+
+        }
+        
+        message EntitySnapshotUpdate
+        {
+          int64 serverTick = 1;
+          repeated EntitySnapshot entities = 2;
+        }
+        
+        message GameplayEventUpdate
+        {
+          int64 serverTick = 1;
+          repeated GameplayEvent events = 2;
+        }
+    }
+}
