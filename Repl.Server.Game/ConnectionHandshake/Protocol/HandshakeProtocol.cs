@@ -42,7 +42,6 @@ public class InitResponse : IHandshakeMessage
     public int RequiredConnections { get; init; }
     public int OptimalConnections { get; init; }
     public DateTime InitDeadline { get; init; }
-    // Reordered: Variable-length field must be last for prefix-less serialization.
     public byte[] ChannelToken { get; init; } = [];
 
     public int GetSize()

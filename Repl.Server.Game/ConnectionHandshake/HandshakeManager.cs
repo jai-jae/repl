@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
+using Repl.Server.Core.DataStructures;
 using Repl.Server.Core.Logging;
 using Repl.Server.Core.ReplProtocol;
 using Repl.Server.Game.ConnectionHandshake.HandshakeInfo;
@@ -44,7 +45,7 @@ public partial class ConnectionHandshakeManager : IDisposable
         this.findActiveSession = findActiveSession;
         this.unboundConnections = new Dictionary<long, UnboundConnectionInfo>();
         this.inactiveChannels = new Dictionary<long, InactiveChannelInfo>();
-        this.tokenToChannel = new Dictionary<byte[], long>();
+        this.tokenToChannel = new Dictionary<byte[], long>(ByteArrayEqualityComparer.Instance);
             
         this.jobQueue = new ConcurrentQueue<ConnectionHandshakeJob>();
         this.pendingJobs = new List<ConnectionHandshakeJob>(capacity: 100);
@@ -137,8 +138,11 @@ public partial class ConnectionHandshakeManager : IDisposable
                     {
                         this.logger.LogError(ex, "Error processing job {JobType}", job.Type);
                     
-                        job.Connection.ForceClose();
-                        CleanupConnection(job.Connection.ConnectionId);
+                        job.Connection?.ForceClose();
+                        if (job.Connection is not null)
+                        {
+                            CleanupConnection(job.Connection.ConnectionId);   
+                        }
                     }
                 }
             }

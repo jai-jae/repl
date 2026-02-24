@@ -6,7 +6,7 @@ namespace Repl.Server.Game.ConnectionHandshake.Jobs;
 internal class ConnectionHandshakeJob
 {
     public HandshakeManagerJobType Type { get; init; }
-    public ReplTcpConnection Connection { get; init; }
+    public ReplTcpConnection? Connection { get; init; }
     public long ConnectionId { get; init; }
     public NetChannelOpCode OpCode { get; init; }
     public ReadOnlyMemory<byte> Message { get; init; }
